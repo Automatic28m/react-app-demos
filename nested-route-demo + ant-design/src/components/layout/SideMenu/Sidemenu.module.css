@@ -1,0 +1,94 @@
+.logobg {
+    /* display: flex; */
+    /* position: fixed; */
+    z-index: 1;
+    align-items: center;
+    border-radius: 10px;
+    /* background-color: var(--primary); */
+}
+
+.logo {
+    padding-left: 20px;
+    height: 64px;
+}
+
+.sider {
+    background-image: linear-gradient(var(--primary), var(--primary-dark), var(--primary-dark)) !important;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.356);
+    height: 100vh;
+    position: fixed !important;
+    margin: 20px;
+    z-index: 3;
+}
+
+.siderMenu {
+    background-color: transparent;
+    padding-bottom: 120px;
+    color: var(--text2);
+    border-right: none;
+}
+
+.trigger {
+    width: 100%;
+    background-color: var(--primary-dark);
+}
+
+.trigger svg {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 30px;
+    color: var(--primary-dark);
+    background-color: var(--text2);
+    font-size: 25px;
+}
+
+.siderMenu :global(.ant-menu-item):hover {
+    color: var(--text2);
+}
+
+.siderMenu :global(.ant-menu-item)::after {
+    border-right: 4px solid var(--text2);
+}
+
+
+.siderMenu svg {
+    font-size: 20px;
+    color: var(--text2);
+}
+
+.siderMenu i {
+    color: var(--text2);
+}
+
+.siderMenu :global(.ant-menu-submenu-selected:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow) {
+    color: var(--secondary);
+}
+
+.siderMenu :global(.ant-menu-submenu-title:hover),
+.siderMenu :global(.ant-menu-submenu-title:hover > .ant-menu-submenu-arrow) {
+    color: var(--secondary) !important;
+}
+
+.siderMenu :global(.ant-menu-sub > .ant-menu-item:hover) {
+    color: var(--secondary) !important;
+}
+
+.siderMenu :global(.ant-menu-submenu-selected),
+.siderMenu :global(.ant-menu-submenu-selected) i {
+    color: var(--text2);
+}
+
+.triggerMenuOutlined {
+    width: 100%;
+
+    text-align: left;
+
+    padding-left: 20px;
+}
+
+.scrollbar {
+    margin-top: 80px;
+}

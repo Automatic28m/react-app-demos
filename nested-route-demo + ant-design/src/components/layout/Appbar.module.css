@@ -1,0 +1,66 @@
+.notiContainer {
+    background-color: var(--text2);
+    width: 250px;
+    border-radius: 5px;
+}
+
+.notiContainer div {
+    padding: 5px;
+}
+
+.notiContainer svg {
+    font-size: 14px;
+}
+
+.notiIcon {
+    width: 40px;
+    /* height: 40px; */
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 2px 5px;
+    border-radius: 30px;
+    font-size: 20px;
+    color: var(--text2);
+    background-color: var(--primary-dark);
+    margin-left: 25px;
+}
+
+.moreIcon {
+    margin: 0 15px;
+}
+
+.breadcrumbContainer {
+    flex: 1;
+    text-align: left;
+    padding-left: 32px;
+    font-size: 16px;
+    color: var(--text1);
+}
+
+.breadcrumbContainer span {
+    color: var(--text1);
+}
+
+.appbar {
+    display: flex;
+    align-items: center;
+    background-color: var(--grey);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding-left: 10px;
+    flex-direction: row; 
+}
+
+.name {
+    line-height: 1;
+    text-align: end;
+    font-size: 12px;
+}
+
+.name span {
+    color: var(--text1);
+}
+
+.position {
+    color: var(--secondary) !important;
+}
