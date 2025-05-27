@@ -1,3 +1,4 @@
+Project Description:
 Developed a full-stack poll web application using React.js, Java Spring Boot, and Tailwind CSS to enhance practical development skills.
 
 Key Features:
@@ -7,7 +8,7 @@ Key Features:
 - Backend: Implemented with Java Spring Boot, exposing RESTful APIs
 - Secure authentication flow including token-based access control
 
-![image (6)](https://github.com/user-attachments/assets/35412ccc-33ee-48e6-ba71-806406fa02e0)Project Description:
+![image (6)](https://github.com/user-attachments/assets/35412ccc-33ee-48e6-ba71-806406fa02e0)
 ![image (5)](https://github.com/user-attachments/assets/534f1b80-a33b-48e5-8e53-2dc1df4b8f12)
 ![image (4)](https://github.com/user-attachments/assets/39371a63-d1f6-430a-9b05-26a352140cf9)
 ![image (1)](https://github.com/user-attachments/assets/999c9636-16bb-40ef-b183-c4c4638e94b5)
