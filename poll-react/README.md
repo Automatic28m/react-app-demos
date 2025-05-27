@@ -1,4 +1,4 @@
-Project Description:
+Project Description:<br>
 Developed a full-stack poll web application using React.js, Java Spring Boot, and Tailwind CSS to enhance practical development skills.
 
 Key Features:
