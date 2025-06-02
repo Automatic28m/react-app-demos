@@ -5,8 +5,9 @@ import { createStore } from 'redux'
 import { createBrowserRouter, RouterProvider, Route, Link } from 'react-router-dom';
 import reducer from './reducers/productReducer'
 import App from './App'
-import ShoppingCart from './ShoppingCart'
+import ShoppingCart from './features/ShoppingCart'
 import store from './store/index';
+import ReceiptPage from './features/ReceiptPage';
 import './index.css';
 
 // const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/ShoppingCart',
     element: <ShoppingCart/>
+  },
+  {
+    path: '/ReceiptPage',
+    element: <ReceiptPage />
   }
 ])
 

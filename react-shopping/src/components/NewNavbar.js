@@ -1,15 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux/es/hooks/useSelector";
-import { selectCartItems } from "../selectors/cartSelectors";
+import { selectCartItems, selectTotalPrice } from "../selectors/cartSelectors";
 
-export function NewNavbar({ page }) {
+export function NewNavbar() {
     const cartItems = useSelector(selectCartItems);
+    const totalPrice = useSelector(selectTotalPrice);
+
     return <div className="navbar bg-primary sticky top-0 z-50">
         <div className="flex-1">
-            <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+            <Link to='/' className="btn btn-ghost normal-case text-xl text-white">React Online Shop</Link>
         </div>
         <div className="flex-none">
+            <div>
+                <Link to='/' className="btn btn-primary btn-block">Home</Link>
+            </div>
             <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle">
                     <div className="indicator">
@@ -20,7 +25,7 @@ export function NewNavbar({ page }) {
                 <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
                     <div className="card-body">
                         <span className="font-bold text-lg">{cartItems.length} Items</span>
-                        <span className="text-info">Subtotal: $999</span>
+                        <span className="text-info">Subtotal: ${totalPrice ? totalPrice.toFixed(2) : '0.00'}</span>
                         <div className="card-actions">
                             <Link to='/ShoppingCart' className="btn btn-primary btn-block">View cart</Link>
                         </div>
@@ -30,7 +35,7 @@ export function NewNavbar({ page }) {
             <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        <img src="logo192.png" />
+                        <img src="logo192.png" alt="logo192"/>
                     </div>
                 </label>
                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">

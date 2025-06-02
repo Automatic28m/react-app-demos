@@ -14,34 +14,22 @@ function ProductGrid({ dataObj, index }) {
         dispatch(addToCart(dataObj));
     }
     return (
-        <div className="card w-full shadow-md hover:shadow-xl" key={index}>
-            <figure className="bg-white p-2"><img src={dataObj.image} className="" alt="Product" /></figure>
-            <div className="card-body">
+        <div className="card w-full border-1 shadow bg-white" key={index}>
+            <div className="flex flex-row items-center justify-center h-[200px]">
+                <figure className="bg-white  p-2 w-[120px]">
+                    <img src={dataObj.image} className="" alt="Product" />
+                </figure>
+            </div>
+            <div className="card-body p-3">
                 <h1 className="card-title text-primary">{dataObj.title}</h1>
                 <h3 className="text-accent">{dataObj.category}</h3>
-                <p>{dataObj.description}</p>
-                <div className="card-actions justify-end">
+                <p className="line-clamp-3">{dataObj.description}</p>
+                <div className="flex flex-row items-center card-actions justify-end">
                     <h1 className='text-secondary'>${dataObj.price}</h1>
                     <button className="btn btn-primary" onClick={handleAddToCart}>Add to cart</button>
                 </div>
             </div>
         </div>
-        // <div key={index} className="p-2">
-        //     <div className="card d-flex flex-column justify-content-between align-items-center p-3 h-100">
-        //         <div className="img h-100 d-flex align-items-center mb-3">
-        //             <img src={dataObj.image} width="200" />
-        //         </div>
-        //         <div className='content'>
-        //             <h1>{dataObj.title}</h1>
-        //             <h3>{dataObj.category}</h3>
-        //             <p>{dataObj.description}</p>
-        //         </div>
-        //         <div className="d-flex flex-row justify-content-between align-items-center w-100">
-        //             <h2 className='text-primary'>${dataObj.price}</h2>
-        //             <button className='btn btn-primary'>Add to cart</button>
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 
