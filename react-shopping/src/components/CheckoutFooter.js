@@ -7,7 +7,7 @@ export default function CheckoutFooter() {
     const cartItems = useSelector(selectCartItems);
 
     return (
-        <div id="checkout-footer" className="flex flex-row bottom-0 absolute h-fit bg-primary w-full p-8 text-white justify-between">
+        <div id="checkout-footer" className="sticky flex flex-row bottom-0 absolute h-fit bg-primary w-full p-8 text-white justify-between">
             <div id="left-section">
                 <div className="grid grid-cols-2 items-center">
                     <p className="">Items : </p>
