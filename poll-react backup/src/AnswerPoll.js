@@ -1,10 +1,10 @@
-import PollChoice from "./component/PollChoice";
-import Sidebar from "./component/Sidebar";
+import PollChoice from "./components/PollChoice";
+import Sidebar from "./components/Sidebar";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ConvertDateTime from "./function/ConvertDateTime";
-import Footer from "./component/Footer";
+import Footer from "./components/Footer";
 import toastr from "toastr";
 import { useNavigate } from "react-router-dom";
 
@@ -16,16 +16,6 @@ function AnswerPoll() {
     const [pollVoted, setPollVoted] = useState(true);
 
     const navigate = useNavigate();
-
-    const url = `http://localhost:8080/api/poll/pollById/${poll_id}`;
-
-    const FetchPoll = async () => {
-        await axios.get(url, { withCredentials: true })
-            .then((response) => {
-                // console.log(response.data)
-                setPollData(response.data)
-            });
-    }
 
     const fetchUserData = async () => {
         await axios.get(`http://localhost:8080/api/auth/getUserData`, { withCredentials: true })
@@ -85,7 +75,9 @@ function AnswerPoll() {
                 user_id: userData.id // Assuming you have userData.id available
             }, { withCredentials: true })
                 .then((response) => {
-                    toastr.success(response.data);
+                    setPollVoted(true);
+                    navigate("/");
+                    toastr.success(response.data.message);
                 })
                 .catch((e) => {
                     toastr.error("An error occurs : " + e);
@@ -94,9 +86,19 @@ function AnswerPoll() {
         }
     }
 
+    const url = `http://localhost:8080/api/poll/pollById/${poll_id}`;
+
+    const FetchPoll = async () => {
+        await axios.get(url, { withCredentials: true })
+            .then((response) => {
+                // console.log(response.data)
+                setPollData(response.data)
+            });
+    }
+
     useEffect(() => {
         fetchUserData()
-    }, []);
+    }, [selectedChoice, pollVoted]);
 
     return (
         <>
@@ -105,7 +107,7 @@ function AnswerPoll() {
                 <div className="">
                     <div className="">
                         <div className="mb-3">
-                            <b className="text-5xl text-primary">{pollData.title}</b>
+                            <b className="text-5xl text-accent">{pollData.title}</b>
                         </div>
                         <div className="mb-5">
                             <div>
@@ -145,7 +147,7 @@ function AnswerPoll() {
                             <div className="divider"></div>
                             <div>
                                 <button
-                                    className={!pollVoted ? "hidden" : "btn btn-success"}
+                                    className={!pollVoted ? "hidden" : "btn btn-outline btn-accent"}
                                     onClick={handleConfirmVote}
                                 >
                                     Confirm vote

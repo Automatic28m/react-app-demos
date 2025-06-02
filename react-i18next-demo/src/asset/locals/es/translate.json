@@ -1,0 +1,9 @@
+{
+    "home": {
+        "greeting": "Hola!, Gracias!",
+        "title": "Bienvenido a React usando react-i18next"
+    },
+    "selection": {
+        "changeLanguage": "Cambiar idioma"
+    }
+}

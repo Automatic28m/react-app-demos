@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import Sidebar from './component/Sidebar';
+import Sidebar from './components/Sidebar';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import toastr from 'toastr';
@@ -62,7 +62,8 @@ function CreatePoll() {
             };
 
             const res = await axios.post(url, postData, { withCredentials: true });
-            toastr.success(res.data);
+            toastr.success(res.data.message);
+            console.log("response : ",res);
             setTitle("")
             setChoice("")
             setChoices([])

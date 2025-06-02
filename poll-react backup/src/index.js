@@ -12,11 +12,20 @@ import UserProfile from './UserProfile';
 import YourPoll from './YourPoll';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import SignOut from './component/Signout';
+import SignOut from './components/Signout';
 import PollSummary from './PollSummary';
 import SigninReducer from './SigninSlice';
 import UserDataReducer from './UserDataSlice';
 import PollHistory from './PollHistory';
+
+import Index from './dashboard/Index';
+import User from './dashboard/components/User';
+import Dashboard from './dashboard/components/Dashboard';
+import UserInsight from './dashboard/components/UserInsight';
+import AdminAndMod from './dashboard/components/Admin';
+import UpdateUserPermission from './dashboard/components/UpdateUserPermission';
+import Moderator from './dashboard/components/Moderator';
+import Admin from './dashboard/components/Admin';
 
 const store = configureStore({
     reducer: {
@@ -62,6 +71,32 @@ const router = createBrowserRouter([
         path: "/PollHistory",
         element: <PollHistory />
     },
+
+    //Admin Dashboard
+    {
+        path: "admin/dashboard",
+        element: <Index component={Dashboard}/>
+    },
+    {
+        path: "admin/users",
+        element: <Index component={User}/>
+    },
+    {
+        path: "admin/userInsight/:user_id",
+        element: <Index component={UserInsight}/>
+    },
+    {
+        path: "admin/admins",
+        element: <Index component={Admin}/>
+    },
+    {
+        path: "admin/moderators",
+        element: <Index component={Moderator}/>
+    },
+    {
+        path: "admin/updatePermission/:user_id",
+        element: <Index component={UpdateUserPermission}/>
+    }
 
 ])
 

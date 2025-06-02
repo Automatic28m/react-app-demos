@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import SigninForm from './component/SigninForm';
-import SignupForm from './component/SignupForm';
+import SigninForm from './components/SigninForm';
+import SignupForm from './components/SignupForm';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeStatus } from './SigninSlice';
 import { useParams } from "react-router-dom";

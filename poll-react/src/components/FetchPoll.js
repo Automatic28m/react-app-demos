@@ -1,9 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
 import PollChat from "./PollChat";
 import { useNavigate } from "react-router-dom";
-import SearchBar from "./SearchBar";
 
 function FetchPoll(props) {
     const navigate = useNavigate();

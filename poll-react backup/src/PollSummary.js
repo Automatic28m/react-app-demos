@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import Sidebar from "./component/Sidebar";
+import Sidebar from "./components/Sidebar";
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import ConvertDateTime from './function/ConvertDateTime'
 import toastr from "toastr";
-import Footer from "./component/Footer";
+import Footer from "./components/Footer";
 
 function PollSummary() {
     const { poll_id } = useParams();

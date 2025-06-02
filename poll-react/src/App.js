@@ -1,13 +1,10 @@
 import Sidebar from "./components/Sidebar";
-import PollCard from "./components/PollCard";
 import Hero from "./components/Hero";
-import PollChat from "./components/PollChat";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import FetchPoll from "./components/FetchPoll";
 import SearchBar from "./components/SearchBar";
 import Client from "./components/Client";
-import Stat1 from "./components/Stat1";
 
 function App() {
 

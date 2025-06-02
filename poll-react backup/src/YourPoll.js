@@ -1,11 +1,11 @@
-import Sidebar from "./component/Sidebar";
-import PollCard from "./component/PollCard";
+import Sidebar from "./components/Sidebar";
+import PollCard from "./components/PollCard";
 import { Link, resolvePath } from "react-router-dom"
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import toastr from "toastr";
-import SearchBar from "./component/SearchBar";
-import FetchCreatedPoll from "./component/FetchCreatedPoll";
+import SearchBar from "./components/SearchBar";
+import FetchCreatedPoll from "./components/FetchCreatedPoll";
 
 function YourPoll() {
     

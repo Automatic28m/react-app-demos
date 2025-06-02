@@ -1,6 +1,6 @@
-import FetchPollHistory from "./component/FetchPollHistory";
-import SearchBar from "./component/SearchBar";
-import Sidebar from "./component/Sidebar";
+import FetchPollHistory from "./components/FetchPollHistory";
+import SearchBar from "./components/SearchBar";
+import Sidebar from "./components/Sidebar";
 import { useState } from "react";
 
 function PollHistory() {

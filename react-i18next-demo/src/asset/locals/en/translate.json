@@ -1,4 +1,9 @@
 {
-    "title": "Welcome to react using react-i18next",
-    "translateMessage": "Change language"
+    "home": {
+        "title": "Welcome to react using react-i18next",
+        "OnlyInEng": "This message is only in Eng by using fallbackLng"
+    },
+    "selection": {
+        "changeLanguage": "Change language"
+    }
 }

@@ -1,0 +1,13 @@
+{
+    "en": {
+        "greeting": "Hello",
+        "thanksGiving": "Thank you"
+    },
+    "th": {
+        "greeting": "สวัสดี",
+        "thanksGiving": "ขอบคุณ"
+    },
+    "es": {
+        "greeting": "Hola"
+    }
+}

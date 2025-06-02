@@ -1,4 +1,8 @@
 {
-    "title": "ยินดีต้อนรับเข้าสู่การใช้ react-i18next บน react",
-    "translateMessage": "เปลี่ยนภาษา"
+    "home": {
+        "title": "ยินดีต้อนรับเข้าสู่การใช้ react-i18next บน react"
+    },
+    "selection": {
+        "changeLanguage": "เปลี่ยนภาษา"
+    }
 }
